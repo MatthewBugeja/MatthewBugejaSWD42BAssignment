@@ -10,6 +10,8 @@ public class ObstacleWaveConfig : ScriptableObject
     [SerializeField] GameObject obstaclePrefab;
     //the path on which to move on
     [SerializeField] GameObject pathPrefab;
+    //time between each spawn
+    [SerializeField] float timeBetweenSpawns = 2f;
     //number of obstacles in the wave
     [SerializeField] int numberOfObstacles = 3;
     //obstacle move speed
@@ -30,6 +32,8 @@ public class ObstacleWaveConfig : ScriptableObject
 
         return waveWayPoints;
     }
+
+    public float GetTimeBetweenSpawns() { return timeBetweenSpawns; }
     public int GetNumberOfObstacles() { return numberOfObstacles; }
     public float GetObstacleMoveSpeed() { return obstacleMoveSpeed; }
 

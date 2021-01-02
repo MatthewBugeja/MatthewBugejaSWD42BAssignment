@@ -96,11 +96,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
-  - {fileID: 4453560368497042152, guid: 2f408ac0149692641a5ef11f818e77f7, type: 3}
-  - {fileID: 2768954873469125424, guid: b5bd53e46c79fcc4db97fb64c7edfcfe, type: 3}
-  - {fileID: 7542632275846417670, guid: f4fca27b07b56494f85caea74d03adfb, type: 3}
-  - {fileID: 4891309780584210035, guid: 117a1a3c9c335fe4aa93e95d8916213e, type: 3}
-  - {fileID: 4303918025736531827, guid: 98decd07005f851499c1c385816cd859, type: 3}
-  - {fileID: 4788580227859680378, guid: 1f3c0f559369537418ae0fbc4bc19559, type: 3}
-  - {fileID: 2700528761017193234, guid: 19ca81c08f774f140ac15b9cbd2c8270, type: 3}
+  - {fileID: 4483483696451353156, guid: 2f408ac0149692641a5ef11f818e77f7, type: 3}
+  - {fileID: 7510678488518062539, guid: b5bd53e46c79fcc4db97fb64c7edfcfe, type: 3}
+  - {fileID: 5416123326594650652, guid: f4fca27b07b56494f85caea74d03adfb, type: 3}
+  - {fileID: 6870364847204415436, guid: 117a1a3c9c335fe4aa93e95d8916213e, type: 3}
+  - {fileID: 6128388026737354476, guid: 98decd07005f851499c1c385816cd859, type: 3}
+  - {fileID: 7085444786484616031, guid: 1f3c0f559369537418ae0fbc4bc19559, type: 3}
+  - {fileID: 447848377353576440, guid: 19ca81c08f774f140ac15b9cbd2c8270, type: 3}
   moveSpeed: 3
+  waveConfig: {fileID: 11400000, guid: 29a683d524f801c45b734f4eaaa9f715, type: 2}
