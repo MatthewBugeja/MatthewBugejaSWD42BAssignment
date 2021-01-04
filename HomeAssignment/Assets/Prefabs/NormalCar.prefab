@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9120102956104757782}
   - component: {fileID: -2230437797128117338}
   - component: {fileID: -3577605218079337614}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NormalCar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  waveConfig: {fileID: 11400000, guid: fd434a67e7e23bc44bc52fab3e12c3f3, type: 2}
+  waveConfig: {fileID: 11400000, guid: 297019980f7a7c24c861fafcb1f59fe6, type: 2}
 --- !u!114 &9120102956104757782
 MonoBehaviour:
   m_ObjectHideFlags: 0

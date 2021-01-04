@@ -57,12 +57,22 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D otherObject)
     {
         DamageDealer damageDealer = otherObject.gameObject.GetComponent<DamageDealer>();
+
+        //if there is no damageDealer on Trigger end the method
+        if (!damageDealer)
+        {
+            return;
+        }
+
         ProcessHit(damageDealer);
     }
 
     private void ProcessHit(DamageDealer damageDealer)
     {
         health -= damageDealer.GetDamage();
+
+        //destroy the bullet that hits the PlayerCar
+        damageDealer.Hit();
 
         if (health <= 0)
         {

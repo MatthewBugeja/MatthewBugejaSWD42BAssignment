@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -970654996830587535}
   - component: {fileID: 4490320309890820350}
   - component: {fileID: 1708997039230988422}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MafiaPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
   - {fileID: 6128388026737354476, guid: 98decd07005f851499c1c385816cd859, type: 3}
   - {fileID: 7085444786484616031, guid: 1f3c0f559369537418ae0fbc4bc19559, type: 3}
   - {fileID: 447848377353576440, guid: 19ca81c08f774f140ac15b9cbd2c8270, type: 3}
-  waveConfig: {fileID: 11400000, guid: 29a683d524f801c45b734f4eaaa9f715, type: 2}
+  waveConfig: {fileID: 11400000, guid: fcc500957bd06844091bd3aef3bb6555, type: 2}
 --- !u!114 &-2382682434969644494
 MonoBehaviour:
   m_ObjectHideFlags: 0
