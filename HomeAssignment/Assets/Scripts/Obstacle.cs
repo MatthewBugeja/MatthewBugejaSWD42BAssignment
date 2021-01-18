@@ -26,6 +26,7 @@ public class Obstacle : MonoBehaviour
     {
         //every frame reduces the amount of time that the frame takes to run
         shotCounter -= Time.deltaTime;
+        
 
         if (shotCounter <= 0f)
         {

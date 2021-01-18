@@ -57,10 +57,14 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D otherObject)
     {
         DamageDealer damageDealer = otherObject.gameObject.GetComponent<DamageDealer>();
+        ObstacleExplosion explosion = otherObject.gameObject.GetComponent<ObstacleExplosion>();
 
         //if there is no damageDealer on Trigger end the method
-        if (!damageDealer)
+        if (otherObject.gameObject.tag == "obstacle")
         {
+            ProcessHit(damageDealer);
+            explosion.Explosion();
+
             return;
         }
 

@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: -5101353907348294844}
   - component: {fileID: -3580632258199493854}
   - component: {fileID: -3028271568411879917}
+  - component: {fileID: -962831769961014415}
   m_Layer: 9
   m_Name: RoadBlock
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -201,3 +202,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-962831769961014415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6853240114279462380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fce805652a8c0d44389faa94e4a6b847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathVFX: {fileID: 6635558412599709580, guid: e6512f251ef73c04abde27caac5a2437, type: 3}
+  explosionDuration: 1
