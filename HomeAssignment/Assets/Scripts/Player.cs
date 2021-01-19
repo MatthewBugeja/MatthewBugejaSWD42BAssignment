@@ -7,6 +7,12 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 2f;
     [SerializeField] float health = 50f;
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float explosionDuration;
+    [SerializeField] AudioClip healthReductionSound;
+    [SerializeField] [Range(0, 1)] float healthReductionSoundVolume = 0.75f;
+    [SerializeField] AudioClip playerDestroySound;
+    [SerializeField] [Range(0, 1)] float playerDestroySoundVolume = 0.75f;
 
     float xMin, xMax, yMin, yMax;
 
@@ -75,12 +81,28 @@ public class Player : MonoBehaviour
     {
         health -= damageDealer.GetDamage();
 
+        //create the healthReductionSound, at the Main Camera position, with the healthReductionSoundVolume
+        AudioSource.PlayClipAtPoint(healthReductionSound, Camera.main.transform.position, healthReductionSoundVolume) ;
+
         //destroy the bullet that hits the PlayerCar
         damageDealer.Hit();
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+
+        //create explosion
+        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+        //destroy explosion after 1 second
+        Destroy(explosion, 1f);
+
+        //create the playerDestroySound, at the Main Camera position, with the playerDestroySoundVolume
+        AudioSource.PlayClipAtPoint(playerDestroySound, Camera.main.transform.position, playerDestroySoundVolume);
     }
 }

@@ -266,3 +266,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 6635558412599709580, guid: e6512f251ef73c04abde27caac5a2437, type: 3}
   explosionDuration: 1
+  obstacleDestroySound: {fileID: 8300000, guid: a9256521e492fc14eb97378b1d316017, type: 3}
+  obstacleDestroySoundVolume: 0.4
