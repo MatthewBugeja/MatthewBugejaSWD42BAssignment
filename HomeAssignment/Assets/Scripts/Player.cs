@@ -104,5 +104,7 @@ public class Player : MonoBehaviour
 
         //create the playerDestroySound, at the Main Camera position, with the playerDestroySoundVolume
         AudioSource.PlayClipAtPoint(playerDestroySound, Camera.main.transform.position, playerDestroySoundVolume);
+
+        FindObjectOfType<Level>().LoadGameOver();
     }
 }
