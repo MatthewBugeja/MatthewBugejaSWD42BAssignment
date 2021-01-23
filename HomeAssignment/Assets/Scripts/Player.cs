@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 2f;
-    [SerializeField] float health = 50f;
+    [SerializeField] int health = 50;
     [SerializeField] GameObject deathVFX;
     [SerializeField] float explosionDuration;
     [SerializeField] AudioClip healthReductionSound;
@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     [SerializeField] [Range(0, 1)] float playerDestroySoundVolume = 0.75f;
 
     float xMin, xMax, yMin, yMax;
+
+    GameSession gameSession;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 
     //method to be able to move the PlayerCar left and right
@@ -65,7 +72,7 @@ public class Player : MonoBehaviour
         DamageDealer damageDealer = otherObject.gameObject.GetComponent<DamageDealer>();
         ObstacleExplosion explosion = otherObject.gameObject.GetComponent<ObstacleExplosion>();
 
-        //if there is no damageDealer on Trigger end the method
+        //if there is no damageDealer on Trigger and the method
         if (otherObject.gameObject.tag == "obstacle")
         {
             ProcessHit(damageDealer);
@@ -89,6 +96,7 @@ public class Player : MonoBehaviour
 
         if (health <= 0)
         {
+            health = 0;
             Die();
         }
     }
